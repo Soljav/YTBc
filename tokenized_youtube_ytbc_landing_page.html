@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tokenized YouTube ($YTBc) — Content On-Chain</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Inter & Space Grotesk Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            ytred: '#FF0000',
+            ytredDark: '#CC0000',
+            bgDark: '#0A0A0C',
+            cardDark: '#121216',
+            borderDark: '#22222a'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0A0A0C;
+      color: #F3F4F6;
+    }
+    .red-glow {
+      box-shadow: 0 0 60px -15px rgba(255, 0, 0, 0.3);
+    }
+    .red-gradient-text {
+      background: linear-gradient(135deg, #FFFFFF 0%, #FF6666 50%, #FF0000 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between items-center px-4 py-8 sm:py-12 relative overflow-x-hidden selection:bg-ytred selection:text-white">
+
+  <!-- Subtle Radial Background Glow -->
+  <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-ytred/10 rounded-full blur-[140px] pointer-events-none z-0"></div>
+
+  <!-- TOP HEADER / BADGE -->
+  <header class="relative z-10 w-full max-w-xl text-center pt-4">
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-ytred/10 border border-ytred/30 text-xs font-medium text-ytred tracking-wider uppercase mb-2">
+      <span class="w-2 h-2 rounded-full bg-ytred animate-ping"></span>
+      Tokenized YouTube • $YTBc
+    </div>
+  </header>
+
+  <!-- MAIN HERO SECTION -->
+  <main class="relative z-10 w-full max-w-2xl mx-auto text-center flex flex-col items-center justify-center my-auto py-12">
+    
+    <!-- EMBLEM / LOGO CONTAINER -->
+    <div class="relative group mb-8">
+      <div class="absolute -inset-1 bg-gradient-to-r from-ytred to-red-600 rounded-3xl blur-xl opacity-40 group-hover:opacity-75 transition duration-700"></div>
+      
+      <div class="relative w-32 h-32 sm:w-40 sm:h-40 bg-cardDark border border-borderDark rounded-3xl p-6 flex items-center justify-center red-glow transition duration-500 transform group-hover:scale-105">
+        <!-- SVG / Image Fallback for YouTube Play Icon -->
+        <svg viewBox="0 0 100 100" class="w-full h-full drop-shadow-[0_0_15px_rgba(255,0,0,0.6)]">
+          <path d="M 92 28 C 91 22, 86 17, 80 16 C 69 13, 50 13, 50 13 C 50 13, 31 13, 20 16 C 14 17, 9 22, 8 28 C 5 39, 5 50, 5 50 C 5 50, 5 61, 8 72 C 9 78, 14 83, 20 84 C 31 87, 50 87, 50 87 C 50 87, 69 87, 80 84 C 86 83, 91 78, 92 72 C 95 61, 95 50, 95 50 C 95 50, 95 39, 92 28 Z" fill="#FF0000"/>
+          <polygon points="40,35 68,50 40,65" fill="#FFFFFF"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- MAIN HEADING -->
+    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight font-display mb-6 leading-tight">
+      Content. Creators.<br>
+      <span class="red-gradient-text">Tokenized On-Chain.</span>
+    </h1>
+
+    <!-- SHORT IMPACTFUL DESCRIPTION -->
+    <p class="text-base sm:text-lg text-gray-400 font-normal leading-relaxed max-w-lg mb-10">
+      <strong class="text-white font-semibold">$YTBc</strong> bridges world-class video content with decentralized ownership. Empowering creators and communities with seamless, permissionless value alignment.
+    </p>
+
+    <!-- CORE FEATURE PILLS -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-xl mb-8">
+      <div class="p-4 rounded-2xl bg-cardDark/80 border border-borderDark text-center backdrop-blur-sm">
+        <h3 class="text-sm font-semibold text-white mb-1">Decentralized</h3>
+        <p class="text-xs text-gray-400">Content economy owned by the community.</p>
+      </div>
+      <div class="p-4 rounded-2xl bg-cardDark/80 border border-borderDark text-center backdrop-blur-sm">
+        <h3 class="text-sm font-semibold text-white mb-1">Creator First</h3>
+        <p class="text-xs text-gray-400">Direct value flow without intermediaries.</p>
+      </div>
+      <div class="p-4 rounded-2xl bg-cardDark/80 border border-borderDark text-center backdrop-blur-sm">
+        <h3 class="text-sm font-semibold text-white mb-1">On-Chain $YTBc</h3>
+        <p class="text-xs text-gray-400">Transparent governance & utility.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="relative z-10 w-full max-w-xl text-center py-4 border-t border-borderDark/50">
+    <p class="text-xs text-gray-500 font-mono tracking-wide">
+      TOKENIZED YOUTUBE ($YTBc) • DECENTRALIZED MEDIA PROTOCOL
+    </p>
+  </footer>
+
+</body>
+</html>
